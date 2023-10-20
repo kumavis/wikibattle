@@ -153,9 +153,9 @@ async function fetchMostViewedArticles(offset = 0, limit = 500) {
   const articles = data.query.mostviewed
     .filter(article => article.ns === 0)
     .filter(article => article.title !== 'Main Page')
-  for (const article of articles) {
-    article.links = await fetchArticleLinks(article.title);
-  }
+  // for (const article of articles) {
+  //   article.links = await fetchArticleLinks(article.title);
+  // }
   return articles;
 }
 
